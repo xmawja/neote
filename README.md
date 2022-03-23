@@ -1,2 +1,2 @@
 # neote
-The next gen text editor.
+📝 A micro lightweight next gen text editor write in c.
