@@ -27,7 +27,7 @@
 *.so
 *.so.*
 *.dylib
-obj
+obj/
 ./obj
 ./obj/*
 
@@ -38,7 +38,7 @@ obj
 *.i*86
 *.x86_64
 *.hex
-obj
+bin/
 ./bin
 ./bin/*
 
