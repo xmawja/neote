@@ -31,11 +31,17 @@ $(TARGET): $(VPATH)/core/neote.c
 ##########################################################
 ##                      PHONYS                          ##
 ##########################################################
+# Run
+.PHONY: run
+run:
+	@echo "Running ... $<"
+	@./$(BINDIR)/$(TARGET)
 
 # Clean build's
 .PHONY: clean
 clean:
-	rm -rf $(BINDIR) 
+	@rm -rf $(BINDIR)
+	@echo "Deleted ... $<"
 
 # PHONY tagrets
 .PHONY: all
