@@ -14,14 +14,18 @@ LDFLAGS	=
 ##			PROJECTS			##
 ##########################################################
 # Directorys
-VPATH	= src
+SRCDIR	= src
+VPATH	= $(SRCDIR)
 
 neote: neote.c
 	$(CC) $(CFLAGS) -o $@ $?
 
 
+##########################################################
+##                      PHONYS                          ##
+##########################################################
 
+# Clean build's
+.PHONY: clean
 clean:
-	rm -rf *.o neote
-
-.PHONY: clean 
+	rm -rf *.o neote 
