@@ -15,7 +15,7 @@ LDFLAGS	=
 ##########################################################
 # Directorys
 SRCDIR	= src
-
+BINDIR	= bin
 VPATH	= $(SRCDIR)
 
 ##########################################################
@@ -23,7 +23,8 @@ VPATH	= $(SRCDIR)
 ##########################################################
 # Linking 
 neote: $(VPATH)/core/neote.c
-	$(CC) $(CFLAGS) -o $@ $?
+	mkdir -p $(BINDIR)
+	$(CC) $(CFLAGS) -o $(BINDIR)/$@ $?
 
 ##########################################################
 ##                      PHONYS                          ##
@@ -32,4 +33,4 @@ neote: $(VPATH)/core/neote.c
 # Clean build's
 .PHONY: clean
 clean:
-	rm -rf *.o neote 
+	rm -rf $(BINDIR) 
