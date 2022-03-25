@@ -1,6 +1,14 @@
-CC	=cc
-CFLAGS	=-Wall -Wextra -Werror
-
+##########################################################
+##			GENERALS			##
+##########################################################
+# Compiler target
+CC	= cc
+# Compiling flags
+CFLAGS	= -Wall -Wextra -Werror
+# Linking flags
+LFLAGS	=
+# Libraries flags
+LDFLAGS	=
 
 TARGET 	:= neote
 all:	neote
