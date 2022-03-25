@@ -15,25 +15,35 @@ LDFLAGS	=
 ##########################################################
 # Name
 TARGET	= neote
-# Directorys
+# App Directorys
 SRCDIR	= \
 	src/core
 HDRDIR	= \
 	inc/core
+# Builld Directorys
+OBJDIR	= obj
 BINDIR	= bin
 # Organized Directorys
 APPDIR	= $(SRCDIR) $(HDRDIR)
-BLDDIR	= $(BINDIR)
+BLDDIR	= $(BINDIR) $(OBJDIR)
 # Search Directorys 
 VPATH	= $(APPDIR)
+
+# Declaration Variables
+SOURCES	:= $(SRCDIR)/*.c
+HEADERS := $(HDRDIR)/*.h
+OBJECTS	:= $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 ##########################################################
 ##                      COMPILATION                     ##
 ##########################################################
 # Linking 
-$(TARGET): $(SRCDIR)/*.c
-	mkdir -p $(BINDIR)
+$(TARGET): $(SOURCES)
+	@mkdir -p $(BINDIR)
 	$(CC) $(CFLAGS) -o $(BINDIR)/$@ $?
+	@echo "Linking Complete"
+#Compilation
+
 
 ##########################################################
 ##                      PHONYS                          ##
