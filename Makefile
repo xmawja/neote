@@ -13,6 +13,8 @@ LDFLAGS	=
 ##########################################################
 ##			PROJECTS			##
 ##########################################################
+# Name
+TARGET	= neote
 # Directorys
 SRCDIR	= src
 BINDIR	= bin
@@ -22,7 +24,7 @@ VPATH	= $(SRCDIR)
 ##                      COMPILATION                     ##
 ##########################################################
 # Linking 
-neote: $(VPATH)/core/neote.c
+$(TARGET): $(VPATH)/core/neote.c
 	mkdir -p $(BINDIR)
 	$(CC) $(CFLAGS) -o $(BINDIR)/$@ $?
 
@@ -34,3 +36,7 @@ neote: $(VPATH)/core/neote.c
 .PHONY: clean
 clean:
 	rm -rf $(BINDIR) 
+
+# PHONY tagrets
+.PHONY: all
+all: $(BINDIR)/$(TARGET)
