@@ -16,8 +16,10 @@ LDFLAGS	=
 # Name
 TARGET	= neote
 # Directorys
-SRCDIR	= src
-HDRDIR	= inc
+SRCDIR	= \
+	src/core
+HDRDIR	= \
+	inc/core
 BINDIR	= bin
 # Organized Directorys
 APPDIR	= $(SRCDIR) $(HDRDIR)
@@ -29,7 +31,7 @@ VPATH	= $(APPDIR)
 ##                      COMPILATION                     ##
 ##########################################################
 # Linking 
-$(TARGET): $(SRCDIR)/core/neote.c
+$(TARGET): $(SRCDIR)/*.c
 	mkdir -p $(BINDIR)
 	$(CC) $(CFLAGS) -o $(BINDIR)/$@ $?
 
