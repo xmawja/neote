@@ -10,14 +10,16 @@ LFLAGS	=
 # Libraries flags
 LDFLAGS	=
 
-TARGET 	:= neote
-all:	neote
+##########################################################
+##			PROJECTS			##
+##########################################################
+# Directorys
+VPATH	= src
 
-%.o: %.c %.h
-	$(CC) $(CFLAGS) -c $^
+neote: neote.c
+	$(CC) $(CFLAGS) -o $@ $?
 
-$(TARGET): neote.o
-	$(CC) $(CFLAGS) neote.o -o $@
+
 
 clean:
 	rm -rf *.o neote
