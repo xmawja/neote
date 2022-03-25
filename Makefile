@@ -20,19 +20,22 @@ SRCDIR	= \
 	src/core
 HDRDIR	= \
 	inc/core
+TESDIR	= test
 # Builld Directorys
 OBJDIR	= obj
 BINDIR	= bin
 # Organized Directorys
 APPDIR	= $(SRCDIR) $(HDRDIR)
-BLDDIR	= $(BINDIR) $(OBJDIR)
+BLDDIR	= $(OBJDIR) $(BINDIR)
 # Search Directorys 
-VPATH	= $(APPDIR)
+VPATH	= $(APPDIR) $(BLDDIR)
 
 # Declaration Variables
-SOURCES	:= $(SRCDIR)/*.c
-HEADERS := $(HDRDIR)/*.h
-OBJECTS	:= $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
+SOURCES	= $(SRCDIR)/*.c
+HEADERS	= $(HDRDIR)/*.h
+TESUNIT	= $(TESDIR)/*.c
+OBJECTS	= $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
+TESTBIN	= $(patsubst $(TESDIR)/%.c, $(TESDIR)/bin%, $(TESUNIT))
 
 # Shell Variables
 REMOVE	= rm -rf
@@ -41,13 +44,17 @@ MKDIR	= mkdir -p
 ##########################################################
 ##                      COMPILATION                     ##
 ##########################################################
+# Compilation
+$(OBJECTS)/%.o: $(OBJDIR)/*.o $(SRCDIR)*.c
+	$(MKDIR) $(OBJDIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+	@echo "Compiling ... $<"
+
 # Linking 
 $(TARGET): $(SOURCES)
 	@$(MKDIR) $(BINDIR)
 	$(CC) $(CFLAGS) -o $(BINDIR)/$@ $?
 	@echo "Linking Complete"
-#Compilation
-
 
 ##########################################################
 ##                      PHONYS                          ##
@@ -58,10 +65,18 @@ run:
 	@echo "Running ... $<"
 	@./$(BINDIR)/$(TARGET)
 
+# Test
+.PHONY: test
+test:
+	$(MKDIR) $(TESDIR)/bin
+	@echo "Unit Test Loaded ..."
+	$(TESUNIT) $(TESTBIN)
+	for test in $(TESTBIN) ; do ./$$test ; done
+
 # Clean build's
 .PHONY: clean
 clean:
-	@$(REMOVE) $(BINDIR)
+	@$(REMOVE) $(BINDIR) $(OBJDIR)
 	@echo "Deleted ... $<"
 
 # PHONY tagrets
