@@ -36,13 +36,14 @@ OBJECTS	:= $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
 # Shell Variables
 REMOVE	= rm -rf
+MKDIR	= mkdir -p
 
 ##########################################################
 ##                      COMPILATION                     ##
 ##########################################################
 # Linking 
 $(TARGET): $(SOURCES)
-	@mkdir -p $(BINDIR)
+	@$(MKDIR) $(BINDIR)
 	$(CC) $(CFLAGS) -o $(BINDIR)/$@ $?
 	@echo "Linking Complete"
 #Compilation
