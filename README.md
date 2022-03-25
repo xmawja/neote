@@ -97,7 +97,7 @@ This software uses the following open source packages:
 ## You may also like...
 
 - [FunWM](https://github.com/mujalab/funwm) - A customized build of dwm. 
-- [Dotfiles](https://github.com/mujalab/Makefiles) - A Dotfiles , For Unix Lovers 
+- [BitOS](https://github.com/mujalab/bitos) - A modern and secure operating system, using Blockchain Architecture.
 <!---------------------------------------------- LICENCE ---------------------------------------------->
 ## License
 
