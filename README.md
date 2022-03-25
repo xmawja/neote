@@ -37,7 +37,7 @@
 
 ## How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Make](https://www.gnu.org/software/make/) (which comes with [GCC](https://gcc.gnu.org/)) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Make](https://www.kernel.org/doc/html/latest/kbuild/llvm.html) (which comes with [LLVM](https://llvm.org/)) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
