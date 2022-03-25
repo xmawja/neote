@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="#"><img src="#" alt="📝" width="200"></a>
+  <a href="#"><img src="https://github.com/mujalab/neote/blob/main/assets/img/logo.png" alt="📝" width="200"></a>
   <br>
   Neote
   <br>
