@@ -13,7 +13,7 @@
 <p align="center">
     <a href="https://badge.fury.io/gh/mujalab%2Fneote"><img src="https://badge.fury.io/gh/mujalab%2Fneote@2x.png" alt="GitHub version" height="18">
     </a>
-  <a href="https://gitter.im/neote/neote"><img src="https://badges.gitter.im/amitmerchant1990/electron-markdownify.svg"></a>
+  <a href="https://gitter.im/mujalab/neote"><img src="https://badges.gitter.im/mujalab/neote.svg"></a>
   <a href="https://saythanks.io/to/mr.mujadiv@gmail.com">
       <img src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg">
   </a>
