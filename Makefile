@@ -34,6 +34,9 @@ SOURCES	:= $(SRCDIR)/*.c
 HEADERS := $(HDRDIR)/*.h
 OBJECTS	:= $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 
+# Shell Variables
+REMOVE	= rm -rf
+
 ##########################################################
 ##                      COMPILATION                     ##
 ##########################################################
@@ -57,7 +60,7 @@ run:
 # Clean build's
 .PHONY: clean
 clean:
-	@rm -rf $(BINDIR)
+	@$(REMOVE) $(BINDIR)
 	@echo "Deleted ... $<"
 
 # PHONY tagrets
