@@ -68,7 +68,7 @@ Note: If you're using Linux Bash for Windows, [see this guide](https://www.howto
 <!---------------------------------------------- CONTRIBUTE ------------------------------------------->
 ## Emailware
 
-Neote is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this app or it has helped you in any way, I'd like you send me an email at <muja@foss.land> about anything you'd want to say about this software. I'd really appreciate it!
+Neote welcomes contributions to this open source project on Github. When contributing, please follow the [ Contributions Guide ](contributing.md).
 <!---------------------------------------------- CREADITS --------------------------------------------->
 ## Credits
 
