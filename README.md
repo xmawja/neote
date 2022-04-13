@@ -66,7 +66,7 @@ Note: If you're using Linux Bash for Windows, [see this guide](https://www.howto
 
 * Work In Progress (WIP)
 <!---------------------------------------------- CONTRIBUTE ------------------------------------------->
-## Emailware
+## Contributing
 
 Neote welcomes contributions to this open source project on Github. When contributing, please follow the [ Contributions Guide ](contributing.md).
 <!---------------------------------------------- CREADITS --------------------------------------------->
